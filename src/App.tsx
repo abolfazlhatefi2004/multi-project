@@ -14,7 +14,7 @@ function App() {
     <div className="bg-gray-50 dark:bg-gray-800 h-screen relative overflow-y-scroll" id="app">
       <Header />
       <Routes>
-        <Route  path="/"  element={<Home />}/>
+        <Route  path="multi-project/"  element={<Home />}/>
       </Routes>
       <Footer />
     </div>

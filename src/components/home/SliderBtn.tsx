@@ -20,6 +20,7 @@ const SliderBtn = (): ReactElement => {
         const btn = e.target as HTMLButtonElement;
         btn.dataset.btn === 'left' ? swiper.slidePrev() : swiper.slideNext();
         setRender(prev => !prev);
+        console.log(render);
     } 
 
     return (
