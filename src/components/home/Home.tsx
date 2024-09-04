@@ -22,7 +22,7 @@ type CardIfoContainer = CardData[];
 
 const enMode: CardIfoContainer = [
   {
-    linkAddress: '/Weather-forecaster',
+    linkAddress: 'multi-project/Weather-forecaster',
     imageSrc: weather,
     title: 'Weather forecaster',
     btnText: "visit page",
