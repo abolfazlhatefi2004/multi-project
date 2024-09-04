@@ -22,7 +22,7 @@ const enMode: ContextTextType = {
   },
   aboutProjct:{
     title: 'about multi project',
-    items: ["The multi project is a super app that contains some simple and practical projects.The purpose of this project is helping to juniors and beginners that who wants to create a sample project as a practice or for his/her resume, can use these project. good luck"],
+    items: ["The Multi Project is a super app that includes several simple and practical projects. The purpose of this project is to help juniors and beginners who want to create sample projects for practice or to add to their resumes. Good luck!"],
   },
   ContactTitle: 'contact us'
 }
@@ -46,12 +46,12 @@ const faMode: ContextTextType = {
 
 
 const Footer = (): ReactElement => {
-  const { english } = useLanguge();
+  const { isEnglish } = useLanguge();
 
-  const contextText: ContextTextType = english ? enMode : faMode;
+  const contextText: ContextTextType = isEnglish ? enMode : faMode;
   return (
-    <footer className="w-full mt-8 bg-gradient-to-r from-[#eab308] via-[#ffc210] to-[#fea718] text-white dark:text-black">
-      <div className='container p-[1rem] flex justify-around lg:justify-between gap-5 flex-wrap'>
+    <footer className="w-full mt-8 dark:bg-gradient-to-r dark:from-[#64748b] dark:via-[#475569] dark:to-[#334155] bg-gradient-to-r from-[#f1f5f9]  via-[#f3f4f6] to-[#f4f4f5] text-gray-800 dark:text-gray-200">
+      <div className='container p-[0.7rem] flex justify-around lg:justify-between gap-5 flex-wrap'>
         <Descriptions contextText={contextText.developer} />
         <Contact title={contextText.ContactTitle} />
         <Descriptions contextText={contextText.aboutProjct} />

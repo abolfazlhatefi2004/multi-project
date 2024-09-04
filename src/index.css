@@ -51,14 +51,15 @@
                color-stop(.6, #ffe902))
 }
 
-.swiper-scrollbar-horizontal{
+.swiper-scrollbar-horizontal {
      background-color: #9ca3af;
 }
-.swiper-scrollbar-drag{
+
+.swiper-scrollbar-drag {
      background-image: -webkit-gradient(linear,
-     40% 0%,
-     75% 84%,
-     from(#eab308),
-     to(#ffc210),
-     color-stop(.6, #ffe902))
+               40% 0%,
+               75% 84%,
+               from(#eab308),
+               to(#ffc210),
+               color-stop(.6, #ffe902))
 }

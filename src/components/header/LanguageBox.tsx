@@ -20,7 +20,7 @@ type PropType = {
 }
 
 const LanguageBox = ({ setlanguageNavShow, contextText }: PropType): ReactElement => {
-    const { english, dispatch } = useLanguge();
+    const { isEnglish, dispatch } = useLanguge();
 
     const languageHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
         e.preventDefault();
@@ -35,11 +35,11 @@ const LanguageBox = ({ setlanguageNavShow, contextText }: PropType): ReactElemen
             <div id="doubleDropdown" className="z-10 fixed ltr:right-12 rtl:left-48 top-20 border border-gray-300 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                     <li>
-                        <button type="button" className={english ? btnClasses.active : btnClasses.passive} onClick={languageHandler} data-lang="english">
+                        <button type="button" className={isEnglish ? btnClasses.active : btnClasses.passive} onClick={languageHandler} data-lang="english">
                             {contextText.en}</button>
                     </li>
                     <li>
-                        <button type="button" className={english ? btnClasses.passive : btnClasses.active} onClick={languageHandler} data-lang="persion">
+                        <button type="button" className={isEnglish ? btnClasses.passive : btnClasses.active} onClick={languageHandler} data-lang="persion">
                             {contextText.fa}</button>
                     </li>
                 </ul>

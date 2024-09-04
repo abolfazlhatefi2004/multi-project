@@ -5,8 +5,8 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily:{
-      vazir:['vazir'],
+    fontFamily: {
+      vazir: ['vazir'],
     },
     container: {
       center: true,
@@ -28,6 +28,8 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ preferredStrategy: 'pseudoelements', nocompatible: true }),
+  ],
 }
 

@@ -13,6 +13,7 @@ import useLanguge from "../../hooks/useLanguage";
 
 
 export interface CardData {
+  linkAddress: string,
   imageSrc: string,
   title: string,
   btnText: string,
@@ -21,21 +22,25 @@ type CardIfoContainer = CardData[];
 
 const enMode: CardIfoContainer = [
   {
+    linkAddress: '/Weather-forecaster',
     imageSrc: weather,
-    title: 'weather predictor',
+    title: 'Weather forecaster',
     btnText: "visit page",
   },
   {
+    linkAddress: '',
     imageSrc: xoGame,
     title: "let's play ox game",
     btnText: "visit page",
   },
   {
+    linkAddress: '',
     imageSrc: RockSccissersPaper,
-    title: "let's play Rock,Sccissers,Paper game",
+    title: "let's play Rock,scissors,Paper game",
     btnText: "visit page",
   },
   {
+    linkAddress: '',
     imageSrc: Calender,
     title: "let's see the analysis of your birth date and life",
     btnText: "visit page",
@@ -46,21 +51,25 @@ const enMode: CardIfoContainer = [
 
 const faMode: CardIfoContainer = [
   {
+    linkAddress: '/Weather-forecaster',
     imageSrc: weather,
     title: 'پیش بینی کننده آب و هوا',
     btnText: "بازدید از صفحه",
   },
   {
+    linkAddress: '',
     imageSrc: xoGame,
     title: "با هم دوز بازی کنیم!؟",
     btnText: "بازدید از صفحه",
   },
   {
+    linkAddress: '',
     imageSrc: RockSccissersPaper,
     title: "باهم سنگ، کاغذ، قیچی بازی کنیم",
     btnText: "بازدید از صفحه",
   },
   {
+    linkAddress: '',
     imageSrc: Calender,
     title: "بریم سن و تولدت رو بررسی کنیم",
     btnText: "بازدید از صفحه",
@@ -69,9 +78,9 @@ const faMode: CardIfoContainer = [
 
 
 const Home = (): ReactElement => {
-  const { english } = useLanguge();
+  const { isEnglish } = useLanguge();
 
-  const cardIfoContainer = english ? enMode : faMode;
+  const cardIfoContainer = isEnglish ? enMode : faMode;
 
   const generaitCards = cardIfoContainer.map((item, index) => <SwiperSlide key={index}><Card cardIfoContainer={item} /></SwiperSlide>)
 

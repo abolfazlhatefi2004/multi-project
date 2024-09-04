@@ -38,12 +38,12 @@ const faMode: ContextText = {
 }
 
 const Header = (): ReactElement => {
-   const {english} = useLanguge();
+   const {isEnglish} = useLanguge();
 
-   const contextText = english ? enMode : faMode;
+   const contextText = isEnglish ? enMode : faMode;
 
   return (
-    <header className="sticky laft-0 top-0 w-full bg-gradient-to-r from-[#eab308] via-[#ffc210] to-[#fea718] p-4 text-white dark:text-black z-20">
+    <header className="sticky laft-0 top-0 w-full bg-gradient-to-r from-[#eab308] via-[#ffc210] to-[#fea718] p-2 text-white dark:text-black z-20">
         <div className="container flex justify-between items-center">
             <Title text={contextText.title}/>
             <Navbar ContextText={contextText.nav} />
